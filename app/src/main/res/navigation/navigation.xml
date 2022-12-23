@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainWineFragment">
+
+    <fragment
+        android:id="@+id/mainWineFragment"
+        android:name="com.ayd.wineapp.ui.MainWineFragment"
+        android:label="fragment_main_wine"
+        tools:layout="@layout/fragment_main_wine" >
+        <action
+            android:id="@+id/action_mainWineFragment_to_detailWineFragment"
+            app:destination="@id/detailWineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailWineFragment"
+        android:name="com.ayd.wineapp.ui.DetailWineFragment"
+        android:label="fragment_detail_wine"
+        tools:layout="@layout/fragment_detail_wine" />
+    <fragment
+        android:id="@+id/allWineFragment"
+        android:name="com.ayd.wineapp.ui.AllWineFragment"
+        android:label="fragment_all_wine"
+        tools:layout="@layout/fragment_all_wine" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.ayd.wineapp.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>

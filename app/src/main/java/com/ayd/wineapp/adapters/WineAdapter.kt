@@ -1,0 +1,60 @@
+package com.ayd.wineapp.adapters
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
+import com.ayd.wineapp.databinding.WineRowLayoutBinding
+import com.ayd.wineapp.model.RedWine
+import com.ayd.wineapp.model.WineItem
+import com.ayd.wineapp.utils.WineDiffUtil
+
+class WineAdapter: RecyclerView.Adapter<WineAdapter.MyViewHolder>() {
+    private var wines = emptyList<WineItem>()
+
+    class MyViewHolder(private val binding: WineRowLayoutBinding) :RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(result: WineItem){
+            binding.result = result               //wine_row_layout'taki <variable> name
+            binding.executePendingBindings()    //update data inside layout change whatever
+        }
+
+        companion object{
+            fun from(parent: ViewGroup): MyViewHolder{
+                val layoutInflater = LayoutInflater.from(parent.context)
+                val binding = WineRowLayoutBinding.inflate(layoutInflater,parent,false)
+                return MyViewHolder(binding)
+            }
+        }
+
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+
+        return MyViewHolder.from(parent)
+
+    }
+
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
+        val currentWine = wines[position]
+        holder.bind(currentWine)
+
+    }
+
+    override fun getItemCount(): Int {
+        return wines.size
+    }
+
+    fun setData(newData: RedWine){
+        val wineDiffUtil = WineDiffUtil(wines,newData)
+        val diffUtilResult = DiffUtil.calculateDiff(wineDiffUtil)
+
+        wines = newData
+        //notifyDataSetChanged() -> bunun yerine daha performanslı olan diffUtil classını yarattık, onu kullanacağız.
+
+        diffUtilResult.dispatchUpdatesTo(this) // bütün listeleri değil, listedeki değişen elemanları fark eder.
+    }
+
+
+}
