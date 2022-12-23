@@ -28,6 +28,7 @@ class MainWineFragment : Fragment() {
     private lateinit var mainViewModel: MainViewModel
 
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
