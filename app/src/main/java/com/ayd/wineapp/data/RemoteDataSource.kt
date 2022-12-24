@@ -2,6 +2,7 @@ package com.ayd.wineapp.data
 
 import com.ayd.wineapp.data.network.WineApi
 import com.ayd.wineapp.model.RedWine
+import com.ayd.wineapp.model.WhiteWine
 import retrofit2.Response
 import javax.inject.Inject
 

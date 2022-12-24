@@ -3,11 +3,11 @@
              xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/mainWineFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/mainWineFragment"
-        android:name="com.ayd.wineapp.ui.MainWineFragment"
+        android:name="com.ayd.wineapp.ui.main.MainWineFragment"
         android:label="fragment_main_wine"
         tools:layout="@layout/fragment_main_wine" >
         <action
@@ -16,17 +16,26 @@
     </fragment>
     <fragment
         android:id="@+id/detailWineFragment"
-        android:name="com.ayd.wineapp.ui.DetailWineFragment"
+        android:name="com.ayd.wineapp.ui.main.DetailWineFragment"
         android:label="fragment_detail_wine"
         tools:layout="@layout/fragment_detail_wine" />
     <fragment
         android:id="@+id/allWineFragment"
-        android:name="com.ayd.wineapp.ui.AllWineFragment"
+        android:name="com.ayd.wineapp.ui.main.AllWineFragment"
         android:label="fragment_all_wine"
         tools:layout="@layout/fragment_all_wine" />
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.ayd.wineapp.ui.DetailFragment"
+        android:name="com.ayd.wineapp.ui.main.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.ayd.wineapp.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_mainWineFragment"
+            app:destination="@id/mainWineFragment" />
+    </fragment>
 </navigation>

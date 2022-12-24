@@ -1,4 +1,4 @@
-package com.ayd.wineapp.ui
+package com.ayd.wineapp.ui.main
 
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ayd.wineapp.R
 import com.ayd.wineapp.adapters.WineAdapter
 import com.ayd.wineapp.databinding.FragmentMainWineBinding
 import com.ayd.wineapp.utils.NetworkResult
@@ -26,7 +25,6 @@ class MainWineFragment : Fragment() {
     private val mAdapter by lazy { WineAdapter() }
 
     private lateinit var mainViewModel: MainViewModel
-
 
 
     override fun onCreateView(

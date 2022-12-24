@@ -1,4 +1,4 @@
-package com.ayd.wineapp.ui
+package com.ayd.wineapp.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,14 +8,14 @@ import android.view.ViewGroup
 import com.ayd.wineapp.R
 
 
-class AllWineFragment : Fragment() {
+class DetailWineFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all_wine, container, false)
+        return inflater.inflate(R.layout.fragment_detail_wine, container, false)
     }
 
 

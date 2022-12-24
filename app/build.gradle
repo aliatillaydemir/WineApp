@@ -95,4 +95,7 @@ dependencies {
     //shimmer for animation effect
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
+    //for anim
+    implementation 'com.airbnb.android:lottie:5.2.0'
+
 }
