@@ -40,7 +40,25 @@ class MainWineFragment : Fragment() {
         mainViewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
 
         setupRecyclerView()
-        requestApiData()
+
+        when (MainFragment.wine) {
+            "red" -> {
+                requestApiData()
+            }
+            "white" -> {
+                requestApiDataWhite()
+            }
+            "sparkling" -> {
+                requestApiDataSparkling()
+            }
+            "rose" -> {
+                requestApiDataRose()
+            }
+            else -> {
+                //u know nothing jon snow
+            }
+        }
+
 
         return binding.root
     }
@@ -52,7 +70,7 @@ class MainWineFragment : Fragment() {
 
     private fun requestApiData(){
         Log.d("ProductDb","read api")
-        mainViewModel.getWine(applyQueries())
+        mainViewModel.getRedWine(applyQueries())
         mainViewModel.wineResponse.observe(viewLifecycleOwner){response ->
             when (response) {
                 is NetworkResult.Success -> {
@@ -70,6 +88,73 @@ class MainWineFragment : Fragment() {
                 }
             }
         }
+
+    }
+
+    private fun requestApiDataWhite(){
+        mainViewModel.getWhiteWine(applyQueries())
+        mainViewModel.wineResponse.observe(viewLifecycleOwner){response ->
+            when (response) {
+                is NetworkResult.Success -> {
+                    response.data?.let { mAdapter.setData(it) }
+                }
+                is NetworkResult.Error -> {
+                    Toast.makeText(
+                        requireContext(),
+                        response.message.toString(),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                is NetworkResult.Loading -> {
+
+                }
+            }
+        }
+
+    }
+
+    private fun requestApiDataSparkling(){
+        mainViewModel.getSparklingWine(applyQueries())
+        mainViewModel.wineResponse.observe(viewLifecycleOwner){response ->
+            when (response) {
+                is NetworkResult.Success -> {
+                    response.data?.let { mAdapter.setData(it) }
+                }
+                is NetworkResult.Error -> {
+                    Toast.makeText(
+                        requireContext(),
+                        response.message.toString(),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                is NetworkResult.Loading -> {
+
+                }
+            }
+        }
+
+    }
+
+    private fun requestApiDataRose(){
+        mainViewModel.getRoseWine(applyQueries())
+        mainViewModel.wineResponse.observe(viewLifecycleOwner){response ->
+            when (response) {
+                is NetworkResult.Success -> {
+                    response.data?.let { mAdapter.setData(it) }
+                }
+                is NetworkResult.Error -> {
+                    Toast.makeText(
+                        requireContext(),
+                        response.message.toString(),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                is NetworkResult.Loading -> {
+
+                }
+            }
+        }
+
     }
 
     private fun applyQueries(): HashMap<String,String>{

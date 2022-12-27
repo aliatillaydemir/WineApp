@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
 
        val appBarConfiguration = AppBarConfiguration(
            setOf(
-               R.id.mainWineFragment,
+               R.id.mainFragment,
                R.id.allWineFragment,
                R.id.detailFragment
            )

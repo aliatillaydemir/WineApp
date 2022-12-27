@@ -33,7 +33,8 @@ class SplashFragment : Fragment(), CoroutineScope {
         launch {
             delay(4000)                      //2 saniye splash screen ekranda duracak.
             withContext(coroutineContext){
-                    findNavController().navigate(R.id.action_splashFragment_to_mainWineFragment)
+                    //findNavController().navigate(R.id.action_splashFragment_to_mainWineFragment)
+                findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
             }
         }
 

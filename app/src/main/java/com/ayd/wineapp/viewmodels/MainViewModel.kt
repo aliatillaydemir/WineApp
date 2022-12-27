@@ -8,7 +8,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.ayd.wineapp.data.Repository
-import com.ayd.wineapp.model.RedWine
+import com.ayd.wineapp.model.Wine
 import com.ayd.wineapp.utils.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -21,10 +21,22 @@ class MainViewModel @Inject constructor(
     application: Application
 ): AndroidViewModel(application) {
 
-    var wineResponse: MutableLiveData<NetworkResult<RedWine>> = MutableLiveData()
+    var wineResponse: MutableLiveData<NetworkResult<Wine>> = MutableLiveData()
 
-    fun getWine(queries: Map<String,String>) = viewModelScope.launch {
+    fun getRedWine(queries: Map<String,String>) = viewModelScope.launch {
         getWineSafeCall(queries)
+    }
+
+    fun getWhiteWine(queries: Map<String,String>) = viewModelScope.launch {
+        getWineWhiteSafeCall(queries)
+    }
+
+    fun getSparklingWine(queries: Map<String, String>) = viewModelScope.launch {
+        getWineSparklingSafeCall(queries)
+    }
+
+    fun getRoseWine(queries: Map<String, String>) = viewModelScope.launch {
+        getWineRoseSafeCall(queries)
     }
 
     private suspend fun getWineSafeCall(queries: Map<String, String>) {
@@ -34,10 +46,20 @@ class MainViewModel @Inject constructor(
                 val response = repository.remote.getRedWine(queries)
                 wineResponse.value = handleProductResponse(response)
 
-/*                val product = wineResponse.value!!.data
-                if(product != null){
-                    offlineCacheProducts(product)
-                }*/
+            }catch (e: Exception){
+                wineResponse.value = NetworkResult.Error("no internet")
+            }
+        }else{
+            wineResponse.value = NetworkResult.Error("No internet Connection")
+        }
+    }
+
+    private suspend fun getWineWhiteSafeCall(queries: Map<String, String>) {
+        wineResponse.value = NetworkResult.Loading()
+        if(connectionInternet()){
+            try {
+                val response = repository.remote.getWhiteWine(queries)
+                wineResponse.value = handleProductResponse(response)
 
             }catch (e: Exception){
                 wineResponse.value = NetworkResult.Error("no internet")
@@ -47,7 +69,40 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    private fun handleProductResponse(response: Response<RedWine>): NetworkResult<RedWine>? {
+    private suspend fun getWineSparklingSafeCall(queries: Map<String, String>) {
+        wineResponse.value = NetworkResult.Loading()
+        if(connectionInternet()){
+            try {
+                val response = repository.remote.getSparklingWine(queries)
+                wineResponse.value = handleProductResponse(response)
+
+            }catch (e: Exception){
+                wineResponse.value = NetworkResult.Error("no internet")
+            }
+        }else{
+            wineResponse.value = NetworkResult.Error("No internet Connection")
+        }
+    }
+
+    private suspend fun getWineRoseSafeCall(queries: Map<String, String>) {
+        wineResponse.value = NetworkResult.Loading()
+        if(connectionInternet()){
+            try {
+                val response = repository.remote.getRoseWine(queries)
+                wineResponse.value = handleProductResponse(response)
+
+            }catch (e: Exception){
+                wineResponse.value = NetworkResult.Error("no internet")
+            }
+        }else{
+            wineResponse.value = NetworkResult.Error("No internet Connection")
+        }
+    }
+
+
+            /** handling and connections  */
+
+    private fun handleProductResponse(response: Response<Wine>): NetworkResult<Wine>? {
         when{
             response.message().toString().contains("timeout") -> {
                 return NetworkResult.Error("Timeout")
