@@ -5,11 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ayd.wineapp.R
 import com.ayd.wineapp.databinding.FragmentViewPagerBinding
-import com.ayd.wineapp.ui.onboarding.FirstOnBoard
-import com.ayd.wineapp.ui.onboarding.SecondOnBoard
-import com.ayd.wineapp.ui.onboarding.ThirdOnBoard
+import com.ayd.wineapp.ui.onboarding.pages.FirstOnBoard
+import com.ayd.wineapp.ui.onboarding.pages.SecondOnBoard
+import com.ayd.wineapp.ui.onboarding.pages.ThirdOnBoard
 
 
 class ViewPagerFragment : Fragment() {

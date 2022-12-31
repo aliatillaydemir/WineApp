@@ -1,4 +1,4 @@
-package com.ayd.wineapp.ui.onboarding
+package com.ayd.wineapp.ui.onboarding.pages
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

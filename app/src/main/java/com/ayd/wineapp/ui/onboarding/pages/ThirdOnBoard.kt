@@ -1,4 +1,4 @@
-package com.ayd.wineapp.ui.onboarding
+package com.ayd.wineapp.ui.onboarding.pages
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.ayd.wineapp.MainActivity
 import com.ayd.wineapp.R
@@ -34,6 +33,7 @@ class ThirdOnBoard : Fragment() {
         binding.finishButton.setOnClickListener{
             startActivity(Intent(activity,MainActivity::class.java))
             onBoardFinish()
+            activity?.onBackPressed()
         }
 
 
