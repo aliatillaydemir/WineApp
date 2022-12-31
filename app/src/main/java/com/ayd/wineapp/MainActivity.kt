@@ -3,6 +3,7 @@ package com.ayd.wineapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -12,15 +13,14 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.ayd.wineapp.databinding.ActivityMainBinding
 import com.ayd.wineapp.ui.splash.SplashFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity(), CoroutineScope {
+class MainActivity : AppCompatActivity() {
 
-    override val coroutineContext: CoroutineContext
-        get() = Dispatchers.Main + Job()
 
     private lateinit var navController: NavController
 
@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_WineApp)
         super.onCreate(savedInstanceState)
 
         supportActionBar?.hide()
@@ -54,14 +55,21 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         binding.bottomNavigationView.setupWithNavController(navController)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        binding.bottomNavigationView.visibility = View.GONE
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        val parentView = bottomNav.parent as? ViewGroup
 
+        navController.addOnDestinationChangedListener { _, destination, _ ->
 
-        launch {
-            delay(4050)
-            withContext(Dispatchers.Main){
-                binding.bottomNavigationView.visibility = View.VISIBLE
+            if (destination.id == R.id.mainWineFragment) {
+                //parentView?.removeView(bottomNav)
+                bottomNav?.visibility = View.GONE
             }
+            else{
+                //parentView?.removeView(bottomNav)
+                //parentView?.addView(bottomNav)
+                bottomNav?.visibility = View.VISIBLE
+            }
+
         }
 
 

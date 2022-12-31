@@ -10,10 +10,13 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ayd.wineapp.MainActivity
+import com.ayd.wineapp.R
 import com.ayd.wineapp.adapters.WineAdapter
 import com.ayd.wineapp.databinding.FragmentMainWineBinding
 import com.ayd.wineapp.utils.NetworkResult
 import com.ayd.wineapp.viewmodels.MainViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -36,6 +39,18 @@ class MainWineFragment : Fragment() {
         _binding = FragmentMainWineBinding.inflate(inflater, container, false)
         //binding.lifecycleOwner = this
         //binding.mainViewModel = mainViewModel
+
+
+
+/*
+        val bottomNav = view?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        //bottomNav?.visibility = View.GONE
+
+        val parentView = bottomNav?.parent as? ViewGroup
+        parentView?.addView(bottomNav)
+*/
+
+
 
         mainViewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
 
@@ -163,5 +178,9 @@ class MainWineFragment : Fragment() {
         return queries
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
 }
