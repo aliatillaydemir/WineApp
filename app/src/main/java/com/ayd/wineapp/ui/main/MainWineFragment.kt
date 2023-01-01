@@ -1,7 +1,6 @@
 package com.ayd.wineapp.ui.main
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,17 +9,14 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ayd.wineapp.MainActivity
-import com.ayd.wineapp.R
 import com.ayd.wineapp.adapters.WineAdapter
 import com.ayd.wineapp.databinding.FragmentMainWineBinding
 import com.ayd.wineapp.utils.NetworkResult
 import com.ayd.wineapp.viewmodels.MainViewModel
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainWineFragment : Fragment() {
+class MainWineFragment : Fragment(){
 
     private var _binding: FragmentMainWineBinding? = null
     private val binding get() = _binding!!
@@ -41,19 +37,7 @@ class MainWineFragment : Fragment() {
         //binding.mainViewModel = mainViewModel
 
 
-
-/*
-        val bottomNav = view?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        //bottomNav?.visibility = View.GONE
-
-        val parentView = bottomNav?.parent as? ViewGroup
-        parentView?.addView(bottomNav)
-*/
-
-
-
         mainViewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
-
         setupRecyclerView()
 
         when (MainFragment.wine) {
@@ -83,79 +67,34 @@ class MainWineFragment : Fragment() {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL,false)
     }
 
+
     private fun requestApiData(){
-        Log.d("ProductDb","read api")
         mainViewModel.getRedWine(applyQueries())
-        mainViewModel.wineResponse.observe(viewLifecycleOwner){response ->
-            when (response) {
-                is NetworkResult.Success -> {
-                    response.data?.let { mAdapter.setData(it) }
-                }
-                is NetworkResult.Error -> {
-                    Toast.makeText(
-                        requireContext(),
-                        response.message.toString(),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                is NetworkResult.Loading -> {
-
-                }
-            }
-        }
-
+        observeData()
     }
 
     private fun requestApiDataWhite(){
         mainViewModel.getWhiteWine(applyQueries())
-        mainViewModel.wineResponse.observe(viewLifecycleOwner){response ->
-            when (response) {
-                is NetworkResult.Success -> {
-                    response.data?.let { mAdapter.setData(it) }
-                }
-                is NetworkResult.Error -> {
-                    Toast.makeText(
-                        requireContext(),
-                        response.message.toString(),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                is NetworkResult.Loading -> {
-
-                }
-            }
-        }
-
+        observeData()
     }
 
     private fun requestApiDataSparkling(){
         mainViewModel.getSparklingWine(applyQueries())
-        mainViewModel.wineResponse.observe(viewLifecycleOwner){response ->
-            when (response) {
-                is NetworkResult.Success -> {
-                    response.data?.let { mAdapter.setData(it) }
-                }
-                is NetworkResult.Error -> {
-                    Toast.makeText(
-                        requireContext(),
-                        response.message.toString(),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                is NetworkResult.Loading -> {
-
-                }
-            }
-        }
-
+        observeData()
     }
 
     private fun requestApiDataRose(){
         mainViewModel.getRoseWine(applyQueries())
+        observeData()
+    }
+
+
+    private fun observeData() {
         mainViewModel.wineResponse.observe(viewLifecycleOwner){response ->
             when (response) {
                 is NetworkResult.Success -> {
-                    response.data?.let { mAdapter.setData(it) }
+                    response.data?.let { mAdapter.setData(it)
+                    }
                 }
                 is NetworkResult.Error -> {
                     Toast.makeText(
@@ -169,8 +108,9 @@ class MainWineFragment : Fragment() {
                 }
             }
         }
-
     }
+
+
 
     private fun applyQueries(): HashMap<String,String>{
         val queries: HashMap<String, String> = HashMap()
@@ -178,9 +118,11 @@ class MainWineFragment : Fragment() {
         return queries
     }
 
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 
 }

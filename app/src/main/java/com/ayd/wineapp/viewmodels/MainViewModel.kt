@@ -24,7 +24,7 @@ class MainViewModel @Inject constructor(
     var wineResponse: MutableLiveData<NetworkResult<Wine>> = MutableLiveData()
 
     fun getRedWine(queries: Map<String,String>) = viewModelScope.launch {
-        getWineSafeCall(queries)
+        getWineRedSafeCall(queries)
     }
 
     fun getWhiteWine(queries: Map<String,String>) = viewModelScope.launch {
@@ -39,7 +39,7 @@ class MainViewModel @Inject constructor(
         getWineRoseSafeCall(queries)
     }
 
-    private suspend fun getWineSafeCall(queries: Map<String, String>) {
+    private suspend fun getWineRedSafeCall(queries: Map<String, String>) {
         wineResponse.value = NetworkResult.Loading()
         if(connectionInternet()){
             try {

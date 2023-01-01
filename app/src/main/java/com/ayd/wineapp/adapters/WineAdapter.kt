@@ -15,7 +15,7 @@ class WineAdapter: RecyclerView.Adapter<WineAdapter.MyViewHolder>() {
     class MyViewHolder(private val binding: WineRowLayoutBinding) :RecyclerView.ViewHolder(binding.root) {
 
         fun bind(result: WineItem){
-            binding.result = result               //wine_row_layout'taki <variable> name
+            binding.result = result               //<variable> name in wine_row_layout
             binding.executePendingBindings()    //update data inside layout change whatever
         }
 
@@ -51,7 +51,15 @@ class WineAdapter: RecyclerView.Adapter<WineAdapter.MyViewHolder>() {
         val diffUtilResult = DiffUtil.calculateDiff(wineDiffUtil)
 
         wines = newData
-        diffUtilResult.dispatchUpdatesTo(this) // bütün listeleri değil, listedeki değişen elemanları fark eder.
+        diffUtilResult.dispatchUpdatesTo(this)
+    }
+
+    fun setDataSearch(newData: List<WineItem>){
+        val wineDiffUtil = WineDiffUtil(wines,newData)
+        val diffUtilResult = DiffUtil.calculateDiff(wineDiffUtil)
+
+        wines = newData
+        diffUtilResult.dispatchUpdatesTo(this)
     }
 
 
