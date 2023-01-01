@@ -64,11 +64,17 @@ class MainActivity : AppCompatActivity() {
                 //parentView?.removeView(bottomNav)
                 bottomNav?.visibility = View.GONE
             }
-            else{
+            if(destination.id == R.id.detailWineFragment){
+                bottomNav?.visibility = View.GONE
+            }
+            if(destination.id ==R.id.mainFragment){
+                bottomNav?.visibility = View.VISIBLE
+            }
+            /*else{
                 //parentView?.removeView(bottomNav)
                 //parentView?.addView(bottomNav)
                 bottomNav?.visibility = View.VISIBLE
-            }
+            }*/
 
         }
 

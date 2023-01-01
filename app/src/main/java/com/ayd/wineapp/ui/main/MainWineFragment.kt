@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ayd.wineapp.adapters.WineAdapter
@@ -24,6 +26,8 @@ class MainWineFragment : Fragment(){
     private val mAdapter by lazy { WineAdapter() }
 
     private lateinit var mainViewModel: MainViewModel
+
+    private val args by navArgs<DetailWineFragmentArgs>()
 
 
     override fun onCreateView(
@@ -58,6 +62,10 @@ class MainWineFragment : Fragment(){
             }
         }
 
+        binding.root.setOnClickListener {
+            val action = MainWineFragmentDirections.actionMainWineFragmentToDetailWineFragment(args.detail)
+            findNavController().navigate(action)
+        }
 
         return binding.root
     }

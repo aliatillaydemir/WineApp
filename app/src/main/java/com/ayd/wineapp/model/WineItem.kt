@@ -1,8 +1,12 @@
 package com.ayd.wineapp.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.RawValue
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class WineItem(
     @SerializedName("id")
     val id: Int?,
@@ -11,9 +15,9 @@ data class WineItem(
     @SerializedName("location")
     val location: String?,
     @SerializedName("rating")
-    val rating: Rating?,
+    val rating: @RawValue Rating?,
     @SerializedName("wine")
     val wine: String?,
     @SerializedName("winery")
     val winery: String?
-)
+): Parcelable

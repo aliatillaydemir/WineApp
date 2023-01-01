@@ -18,12 +18,20 @@
         android:id="@+id/detailWineFragment"
         android:name="com.ayd.wineapp.ui.main.DetailWineFragment"
         android:label="fragment_detail_wine"
-        tools:layout="@layout/fragment_detail_wine" />
+        tools:layout="@layout/fragment_detail_wine" >
+        <argument
+            android:name="detail"
+            app:argType="com.ayd.wineapp.model.WineItem" />
+    </fragment>
     <fragment
         android:id="@+id/allWineFragment"
         android:name="com.ayd.wineapp.ui.main.AllWineFragment"
         android:label="fragment_all_wine"
-        tools:layout="@layout/fragment_all_wine" />
+        tools:layout="@layout/fragment_all_wine" >
+        <action
+            android:id="@+id/action_allWineFragment_to_detailWineFragment"
+            app:destination="@id/detailWineFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.ayd.wineapp.ui.main.DetailFragment"
