@@ -31,6 +31,8 @@ class AllWineFragment : Fragment() {
 
     private val args by navArgs<DetailWineFragmentArgs>()
 
+    private var flagStop = true
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,12 +46,22 @@ class AllWineFragment : Fragment() {
 
         requestApiData()
 
+        binding.wineSearchView.isSubmitButtonEnabled = true
+
         binding.root.setOnClickListener {
             val action = AllWineFragmentDirections.actionAllWineFragmentToDetailWineFragment(args.detail)
             findNavController().navigate(action)
         }
 
         return binding.root
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        // Clear the text in the SearchView
+        val searchView = binding.wineSearchView
+        searchView.setQuery("", false)
     }
 
     private fun setupRecyclerView(){
@@ -60,10 +72,15 @@ class AllWineFragment : Fragment() {
 
     private fun requestApiData(){
 
-        mainViewModel.getRedWine(applyQueries())
-        mainViewModel.getWhiteWine(applyQueries())
-        mainViewModel.getSparklingWine(applyQueries())
-        mainViewModel.getRoseWine(applyQueries())
+        if(flagStop){
+            mainViewModel.getRedWine(applyQueries())
+            mainViewModel.getWhiteWine(applyQueries())
+            mainViewModel.getSparklingWine(applyQueries())
+            mainViewModel.getRoseWine(applyQueries())
+
+            flagStop = false
+        }
+
 
         mainViewModel.wineResponse.observe(viewLifecycleOwner){response ->
             when (response) {
@@ -77,7 +94,7 @@ class AllWineFragment : Fragment() {
                                 val filteredData = response.data.filter { it.wine!!.lowercase().contains(query) }
                                 mAdapter.setDataSearch(filteredData)
 
-                                return false
+                                return true
                             }
 
                             override fun onQueryTextChange(newText: String): Boolean {
@@ -85,7 +102,7 @@ class AllWineFragment : Fragment() {
                                 mAdapter.setDataSearch(filteredData)
                                 //mAdapter.notifyDataSetChanged()
 
-                                return false
+                                return true
                             }
                         })
 

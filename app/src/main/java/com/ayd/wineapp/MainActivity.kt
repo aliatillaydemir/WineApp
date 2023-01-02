@@ -70,6 +70,9 @@ class MainActivity : AppCompatActivity() {
             if(destination.id ==R.id.mainFragment){
                 bottomNav?.visibility = View.VISIBLE
             }
+            if(destination.id == R.id.allWineFragment){
+                bottomNav?.visibility = View.VISIBLE
+            }
             /*else{
                 //parentView?.removeView(bottomNav)
                 //parentView?.addView(bottomNav)

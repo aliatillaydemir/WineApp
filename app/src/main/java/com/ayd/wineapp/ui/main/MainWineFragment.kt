@@ -1,6 +1,7 @@
 package com.ayd.wineapp.ui.main
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +30,8 @@ class MainWineFragment : Fragment(){
 
     private val args by navArgs<DetailWineFragmentArgs>()
 
+    private var flagStop = true
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,16 +49,30 @@ class MainWineFragment : Fragment(){
 
         when (MainFragment.wine) {
             "red" -> {
-                requestApiData()
+                if(flagStop){
+                    requestApiDataRed()
+                    flagStop = false
+                    Log.d("log","called the red wine with flag")
+                }
+                Log.d("log","called the red wine")
             }
             "white" -> {
-                requestApiDataWhite()
+                if(flagStop){
+                    requestApiDataWhite()
+                    flagStop = false
+                }
             }
             "sparkling" -> {
-                requestApiDataSparkling()
+                if (flagStop){
+                    requestApiDataSparkling()
+                    flagStop = false
+                }
             }
             "rose" -> {
-                requestApiDataRose()
+                if(flagStop){
+                    requestApiDataRose()
+                    flagStop = false
+                }
             }
             else -> {
                 //u know nothing jon snow
@@ -76,7 +93,7 @@ class MainWineFragment : Fragment(){
     }
 
 
-    private fun requestApiData(){
+    private fun requestApiDataRed(){
         mainViewModel.getRedWine(applyQueries())
         observeData()
     }

@@ -1,0 +1,4 @@
+ext{
+    coreKtxVersion = '1.8.0'
+    appcompatVersion = '1.5.1'
+}
