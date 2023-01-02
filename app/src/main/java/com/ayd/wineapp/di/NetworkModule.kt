@@ -1,4 +1,4 @@
-package com.ayd.wineapp.dpinjection
+package com.ayd.wineapp.di
 
 import com.ayd.wineapp.utils.Constants.Companion.BASE_URL
 import com.ayd.wineapp.data.network.WineApi

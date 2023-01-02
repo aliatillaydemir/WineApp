@@ -11,6 +11,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.ayd.wineapp.MainActivity
 import com.ayd.wineapp.R
 import com.ayd.wineapp.databinding.FragmentThirdOnBoardBinding
+import com.ayd.wineapp.utils.Constants.Companion.SHARED_PREF_BOARD
+import com.ayd.wineapp.utils.Constants.Companion.SHARED_PREF_EDIT
 
 
 class ThirdOnBoard : Fragment() {
@@ -25,7 +27,7 @@ class ThirdOnBoard : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentThirdOnBoardBinding.inflate(inflater, container, false)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)  //view pager'a ulaşmak için findViewByid kullandım.
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)  //findViewById for view pager. Because it's not a this fragment component. So we don't using viewbinding.
 
         binding.backtoSecondButton.setOnClickListener{
             viewPager?.currentItem = 1
@@ -42,9 +44,9 @@ class ThirdOnBoard : Fragment() {
 
 
     private fun onBoardFinish(){
-        val sharedPref = requireActivity().getSharedPreferences("ONBOARD", Context.MODE_PRIVATE)
+        val sharedPref = requireActivity().getSharedPreferences(SHARED_PREF_BOARD, Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
-        editor.putBoolean("FINISHED",true)
+        editor.putBoolean(SHARED_PREF_EDIT,true)
         editor.apply()
     }
 

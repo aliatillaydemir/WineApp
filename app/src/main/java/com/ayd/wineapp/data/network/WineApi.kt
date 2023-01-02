@@ -1,26 +1,30 @@
 package com.ayd.wineapp.data.network
 
 import com.ayd.wineapp.model.Wine
+import com.ayd.wineapp.utils.Constants.Companion.GET_URL_RED
+import com.ayd.wineapp.utils.Constants.Companion.GET_URL_ROSE
+import com.ayd.wineapp.utils.Constants.Companion.GET_URL_SPARKLING
+import com.ayd.wineapp.utils.Constants.Companion.GET_URL_WHITE
 import retrofit2.Response
 import retrofit2.http.GET
 
 interface WineApi {
 
-    @GET("/wines/reds")
+    @GET(GET_URL_RED)
     suspend fun getRedWines(
         //@QueryMap queries: Map<String,String>
     ):Response<Wine>
 
-    @GET("/wines/whites")
+    @GET(GET_URL_WHITE)
     suspend fun getWhiteWines(
         //@QueryMap queries: Map<String,String>
     ):Response<Wine>
 
-    @GET("/wines/sparkling")
+    @GET(GET_URL_SPARKLING)
     suspend fun getSparklingWines(
     ):Response<Wine>
 
-    @GET("/wines/rose")
+    @GET(GET_URL_ROSE)
     suspend fun getRoseWines(
     ):Response<Wine>
 

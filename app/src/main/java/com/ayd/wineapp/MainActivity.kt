@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        val parentView = bottomNav.parent as? ViewGroup
+        //val parentView = bottomNav.parent as? ViewGroup
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
 

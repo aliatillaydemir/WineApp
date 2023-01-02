@@ -10,6 +10,8 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.ayd.wineapp.MainActivity
 import com.ayd.wineapp.R
+import com.ayd.wineapp.utils.Constants.Companion.SHARED_PREF_BOARD
+import com.ayd.wineapp.utils.Constants.Companion.SHARED_PREF_EDIT
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -46,8 +48,8 @@ class SplashFragment : Fragment(), CoroutineScope {
 
 
     private fun onBoardingFinished(): Boolean {
-        val sharedPref = requireActivity().getSharedPreferences("ONBOARD", Context.MODE_PRIVATE)
-        return sharedPref.getBoolean("FINISHED", false)
+        val sharedPref = requireActivity().getSharedPreferences(SHARED_PREF_BOARD, Context.MODE_PRIVATE)
+        return sharedPref.getBoolean(SHARED_PREF_EDIT, false)
     }
 
 
