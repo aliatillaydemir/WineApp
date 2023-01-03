@@ -33,7 +33,7 @@ class SplashFragment : Fragment(), CoroutineScope {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         launch {
-            delay(4000)
+            delay(40)  //4000
             withContext(coroutineContext){
                 if(onBoardingFinished()){
                     startActivity(Intent(activity,MainActivity::class.java))

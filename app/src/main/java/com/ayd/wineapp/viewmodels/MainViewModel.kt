@@ -47,7 +47,7 @@ class MainViewModel @Inject constructor(
                 wineResponse.value = handleProductResponse(response)
 
             }catch (e: Exception){
-                wineResponse.value = NetworkResult.Error("no internet")
+                wineResponse.value = NetworkResult.Error("the API cannot be accessed.")
             }
         }else{
             wineResponse.value = NetworkResult.Error("No internet Connection")
@@ -62,7 +62,7 @@ class MainViewModel @Inject constructor(
                 wineResponse.value = handleProductResponse(response)
 
             }catch (e: Exception){
-                wineResponse.value = NetworkResult.Error("no internet")
+                wineResponse.value = NetworkResult.Error("the API cannot be accessed.")
             }
         }else{
             wineResponse.value = NetworkResult.Error("No internet Connection")
@@ -77,7 +77,7 @@ class MainViewModel @Inject constructor(
                 wineResponse.value = handleProductResponse(response)
 
             }catch (e: Exception){
-                wineResponse.value = NetworkResult.Error("no internet")
+                wineResponse.value = NetworkResult.Error("the API cannot be accessed.")
             }
         }else{
             wineResponse.value = NetworkResult.Error("No internet Connection")
@@ -92,7 +92,7 @@ class MainViewModel @Inject constructor(
                 wineResponse.value = handleProductResponse(response)
 
             }catch (e: Exception){
-                wineResponse.value = NetworkResult.Error("no internet")
+                wineResponse.value = NetworkResult.Error("the API cannot be accessed.")
             }
         }else{
             wineResponse.value = NetworkResult.Error("No internet Connection")
@@ -111,7 +111,7 @@ class MainViewModel @Inject constructor(
                 return NetworkResult.Error("Key fail!")
             }
             response.body()!!.isNullOrEmpty() -> {
-                return NetworkResult.Error("product not found")
+                return NetworkResult.Error("wine not found")
             }
             response.isSuccessful -> {
                 val product = response.body()

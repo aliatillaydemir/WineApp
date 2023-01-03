@@ -29,6 +29,8 @@ class DetailWineFragment : Fragment() {
         binding.imageView6.load(args.detail.image)
         binding.textView16.text = args.detail.wine.toString()
 
+        binding.textView22.text = args.detail.winery
+
         return binding.root
     }
 
