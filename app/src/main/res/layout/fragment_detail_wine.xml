@@ -48,6 +48,7 @@
         android:layout_width="209dp"
         android:layout_height="581dp"
         android:scrollbars="none"
+        android:paddingTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,16 +57,77 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingStart="16dp"
             android:orientation="vertical" >
 
             <TextView
                 android:id="@+id/textDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/sevillana"
+                android:lineSpacingExtra="4sp"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:text="dğsadosa*dsadupdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdğsadosa*dsadupısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfısaodupıosaudpıosapodsdfsdfsdfsdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdf"
-                android:textSize="12sp" />
+                android:text="Everything seems to be fine, wonderful, balanced after a family weekend. And one day your lovely half suddenly says:"
+                android:textColor="#302626"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sevillana"
+                android:lineSpacingExtra="4sp"
+                android:paddingStart="12dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="12dp"
+                android:text="“You know, dear! You’re beautiful and perfect, but I’m nasty and not worthy of you. That’s why I’m breaking up with you.”"
+                android:textColor="#A66C2A2A"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="20dp"
+                android:lineSpacingExtra="4sp"
+                android:fontFamily="@font/sevillana"
+                android:textSize="18sp"
+                android:textColor="#302626"
+                android:text="Familiar? So this Pinot for you! Garnet red in colour. A vibrant wine with purity of fruit and great intensity.
+Packed with lively flavors and distinct herbaceous aromas." />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4sp"
+                android:fontFamily="@font/sevillana"
+                android:textSize="18sp"
+                android:text="Is it not enough to forget your ex?" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#302626"
+                android:lineSpacingExtra="4sp"
+                android:fontFamily="@font/sevillana"
+                android:textSize="18sp"
+                android:text="Hold my glass!
+By tasting this wine you will feel a fragrant dark cherry with delicate violet notes and an elegant seductive texture.
+Raspberry, cherry and plum with subtle oak on the nose. Earthy character, long finish, dry with soft fruit tannins,
+a wine with serious structure and length." />
 
         </LinearLayout>
     </ScrollView>

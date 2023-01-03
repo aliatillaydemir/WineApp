@@ -2,5 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/bentham</item>
+        <item>@font/roboto</item>
+        <item>@font/sevillana</item>
     </array>
 </resources>
