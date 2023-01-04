@@ -1,4 +1,9 @@
 ext{
     coreKtxVersion = '1.8.0'
     appcompatVersion = '1.5.1'
+    materialVersion = '1.7.0'
+    constraintLayoutVersion = '2.1.4'
+    junitVersion = '4.13.2'
+    juintextVersion = '1.1.4'
+    espressoCoreVersion = '3.5.0'
 }
