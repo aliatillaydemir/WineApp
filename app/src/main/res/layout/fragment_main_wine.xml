@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainbackground"
+    android:background="@drawable/winebackground"
     tools:context=".ui.main.MainWineFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="36dp"
-        android:text="Broken "
+        android:text="@string/broken"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="36sp"
@@ -33,11 +33,10 @@
         android:id="@+id/textTitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Heart"
+        android:text="@string/heart"
         android:textStyle="italic"
         android:textColor="@color/white"
         android:textSize="36sp"
-
         app:layout_constraintStart_toEndOf="@+id/textTitle1"
         app:layout_constraintTop_toTopOf="@+id/textTitle1" />
 
@@ -47,7 +46,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
-        android:text="Oh, dear... We know the best combinations of wine and tears."
+        android:text="@string/oh_dear_we_know_the_best_combinations_of_wine_and_tears"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"

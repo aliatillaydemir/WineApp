@@ -1,5 +1,35 @@
 <resources>
     <string name="app_name">WineApp</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="what_is_wine">What is Wine?</string>
+    <string name="wine_the_fermented">wine, the fermented juice of the grape. Of the grape genus Vitis, one species, V. vinifera (often erroneously called the European grape), is used almost exclusively. Beverages produced from V. labrusca, the native American grape, and from other grape species are also considered wines. When other fruits are fermented to produce a kind of wine, the name of the fruit is included, as in the terms peach wine and blackberry wine.</string>
+    <string name="the_wine_grape">The wine grape</string>
+    <string name="the_thousands_of_grape">The thousands of grape varieties that have been developed, with 5,000 reported for V. vinifera alone, differ from one another in such characteristics as colour, size, and shape of berry; juice composition (including flavour); ripening time; and disease resistance. They are grown under widely varying climatic conditions, and many different processes are applied in producing wines from them. All of these possible variations contribute to the vast variety of wines available.</string>
+    <string name="everything_seems_to">Everything seems to be fine, wonderful, balanced after a family weekend. And one day your lovely half suddenly says:</string>
+    <string name="you_know_dear">“You know, dear! You’re beautiful and perfect, but I’m nasty and not worthy of you. That’s why I’m breaking up with you.”</string>
+    <string name="familiar_so_this">Familiar? So this Pinot for you! Garnet red in colour. A vibrant wine with purity of fruit and great intensity. Packed with lively flavors and distinct herbaceous aromas.</string>
+    <string name="is_it_not_enough">Is it not enough to forget your ex?</string>
+    <string name="hold_my_glass">Hold my glass! By tasting this wine you will feel a fragrant dark cherry with delicate violet notes and an elegant seductive texture. Raspberry, cherry and plum with subtle oak on the nose. Earthy character, long finish, dry with soft fruit tannins, a wine with serious structure and length.</string>
+    <string name="wine_brings_to_light">“Wine brings to light the hidden secrets of the soul, gives being to our hopes, bids the coward flight, drives dull care away, and teaches new means for the accomplishment of our wishes.” – Horace</string>
+    <string name="sophisticated_thrill">Sophisticated thrill in a bottle.</string>
+    <string name="rose_wine">Rose Wine</string>
+    <string name="see_the_wines">See the Wines</string>
+    <string name="sparkling_wines">Sparkling Wines</string>
+    <string name="white_wines">White Wines</string>
+    <string name="red_wines">Red Wines</string>
+    <string name="wine">Wine</string>
+    <string name="not">Not?</string>
+    <string name="we_offer_wine_set_almost_for_all_the_cases_of_life_choose_yours">We offer wine set almost for all the cases of life. Choose yours.</string>
+    <string name="broken">Broken</string>
+    <string name="heart">Heart</string>
+    <string name="oh_dear_we_know_the_best_combinations_of_wine_and_tears">Oh, dear... We know the best combinations of wine and tears.</string>
+    <string name="we_re_all_about">We’re all about giving you a legendary drinking experience.</string>
+    <string name="you_can_t_have">You can’t have a proper celebration without wine.</string>
+    <string name="sip_and_savor">Sip and savor.</string>
+    <string name="location">Location:</string>
+    <string name="average">Average:</string>
+    <string name="reviews">Reviews:</string>
+    <string name="main">main</string>
+    <string name="search">search</string>
+    <string name="detail">detail</string>
 </resources>

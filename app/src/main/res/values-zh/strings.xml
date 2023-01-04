@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">酒类应用</string>
+    <string name="what_is_wine">什么是葡萄酒？</string>
+    <string name="wine_the_fermented">葡萄酒，葡萄发酵的汁液。 在葡萄属葡萄中，几乎只使用一种，V. vinifera（通常被错误地称为欧洲葡萄）。 由美国本土葡萄 V. labrusca 和其他葡萄品种生产的饮料也被视为葡萄酒。 当其他水果发酵成一种酒时，会包括水果的名称，例如桃酒和黑莓酒。</string>
+    <string name="the_wine_grape">酿酒葡萄</string>
+    <string name="the_thousands_of_grape">已经开发的数千种葡萄品种，仅 V. vinifera 就有 5,000 种，它们在颜色、大小和浆果形状等特征上各不相同； 果汁成分（包括香料）； 成熟时间； 和抗病能力。 它们在广泛不同的气候条件下生长，并且在用它们生产葡萄酒时应用了许多不同的过程。 所有这些可能的变化都有助于提供种类繁多的葡萄酒。</string>
+    <string name="everything_seems_to">家庭周末过后，一切似乎都很好、美妙、平衡。 有一天，你可爱的另一半突然说：</string>
+    <string name="you_know_dear">“你知道的，亲爱的！ 你很漂亮，很完美，但我很下流，配不上你。 这就是我要和你分手的原因。”</string>
+    <string name="familiar_so_this">熟悉的？ 所以这款 Pinot 适合您！ 石榴红色。 一款充满活力的葡萄酒，带有纯净的果味和浓郁的口感。 充满活泼的味道和独特的草本香气。</string>
+    <string name="is_it_not_enough">忘记前任还不够吗？</string>
+    <string name="hold_my_glass">拿着我的杯子！ 品尝这款酒，您会感受到黑樱桃的芬芳，带有精致的紫罗兰香调和优雅诱人的质感。 覆盆子、樱桃和李子的香气，带有淡淡的橡木气息。 泥土味，余味悠长，干爽，带有柔和的果味单宁，是一款结构严谨、回味悠长的葡萄酒。</string>
+    <string name="wine_brings_to_light">“葡萄酒揭示了灵魂隐藏的秘密，让我们的希望成为现实，让胆小鬼逃跑，驱走沉闷的忧虑，并教会我们实现愿望的新方法。” – 贺拉斯</string>
+    <string name="sophisticated_thrill">精致的瓶中刺激。</string>
+    <string name="rose_wine">桃红葡萄酒</string>
+    <string name="see_the_wines">查看葡萄酒</string>
+    <string name="sparkling_wines">起泡酒</string>
+    <string name="white_wines">白葡萄酒</string>
+    <string name="red_wines">红酒</string>
+    <string name="wine">葡萄酒</string>
+    <string name="not">不是？</string>
+    <string name="we_offer_wine_set_almost_for_all_the_cases_of_life_choose_yours">我们提供的酒具几乎适用于生活中的所有情况。 选择你的。</string>
+    <string name="broken">破碎的</string>
+    <string name="heart">心</string>
+    <string name="oh_dear_we_know_the_best_combinations_of_wine_and_tears">哦，亲爱的……我们知道酒和眼泪的最佳组合。</string>
+    <string name="we_re_all_about">我们致力于为您提供传奇般的饮酒体验。</string>
+    <string name="you_can_t_have">没有酒就无法举行适当的庆祝活动。</string>
+    <string name="sip_and_savor">细细品味。</string>
+    <string name="location">地点：</string>
+    <string name="average">平均的：</string>
+    <string name="reviews">点评：</string>
+    <string name="main">主要的</string>
+    <string name="search">搜索</string>
+    <string name="detail">细节</string>
+</resources>

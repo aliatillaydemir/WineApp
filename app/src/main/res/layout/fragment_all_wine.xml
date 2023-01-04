@@ -4,22 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient"
+    android:background="#1A2332"
     tools:context=".ui.main.AllWineFragment">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/splashAnimation"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/wine_animation" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/allRecyclerView"
@@ -36,9 +23,30 @@
         android:id="@+id/wineSearchView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#DDDDDD"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="210dp"
+        android:layout_height="105dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/allRecyclerView"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:rotationY="180"
+        app:lottie_rawRes="@raw/light_sweep" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="210dp"
+        android:layout_height="105dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lottieAnimationView"
+        app:layout_constraintEnd_toStartOf="@+id/lottieAnimationView"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/light_sweep" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

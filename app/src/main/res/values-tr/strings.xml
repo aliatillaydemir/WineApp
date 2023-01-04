@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WineApp</string>
+    <string name="what_is_wine">Şarap Nedir?</string>
+    <string name="wine_the_fermented">şarap, üzümün fermente edilmiş suyu. Üzüm cinsi Vitis\'ten bir tür olan V. vinifera (genellikle yanlışlıkla Avrupa üzümü olarak anılır) neredeyse yalnızca kullanılır. Yerli Amerikan üzümü V. labrusca\'dan ve diğer üzüm türlerinden üretilen içecekler de şarap olarak kabul edilir. Bir çeşit şarap üretmek için diğer meyveler fermente edildiğinde, şeftali şarabı ve böğürtlen şarabı terimlerinde olduğu gibi meyvenin adı da dahil edilir.</string>
+    <string name="the_wine_grape">Şaraplık üzüm</string>
+    <string name="the_thousands_of_grape">Sadece V. vinifera için bildirilen 5.000 olmak üzere geliştirilen binlerce üzüm çeşidi, meyvenin rengi, boyutu ve şekli gibi özelliklerde birbirinden farklıdır; meyve suyu bileşimi (aroma dahil); olgunlaşma süresi; ve hastalık direnci. Çok değişken iklim koşullarında yetiştirilirler ve bunlardan şarap yapımında birçok farklı işlem uygulanır. Tüm bu olası varyasyonlar, mevcut çok çeşitli şaraplara katkıda bulunur.</string>
+    <string name="everything_seems_to">Bir aile haftasonunun ardından her şey yolunda, harika ve dengeli görünüyor. Ve bir gün sevgili yarınız aniden şöyle der:</string>
+    <string name="you_know_dear">\"Biliyorsun canım! Sen güzel ve mükemmelsin ama ben çirkinim ve sana layık değilim. Bu yüzden senden ayrılıyorum.\"</string>
+    <string name="familiar_so_this">Tanıdık? Yani bu Pinot sizin için! Granat kırmızısı renktedir. Meyve saflığı ve yüksek yoğunluğu ile canlı bir şarap. Canlı tatlar ve belirgin otsu aromalarla doludur.</string>
+    <string name="is_it_not_enough">Eski sevgilini unutmak yetmez mi?</string>
+    <string name="hold_my_glass">Bardağımı tut! Bu şarabı tadarak, narin menekşe notaları ve zarif, baştan çıkarıcı bir dokuya sahip hoş kokulu bir vişne hissedeceksiniz. Burunda ince meşe ile ahududu, kiraz ve erik. Dünyevi karakterli, uzun bitişli, yumuşak meyve tanenli sek, ciddi yapısı ve uzunluğu olan bir şarap.</string>
+    <string name="wine_brings_to_light">\"Şarap, ruhun gizli sırlarını gün ışığına çıkarır, umutlarımıza canlılık verir, korkakların kaçmasını sağlar, sıkıcı kaygıları uzaklaştırır ve dileklerimizi gerçekleştirmenin yeni yollarını öğretir.\" – Horace</string>
+    <string name="sophisticated_thrill">Bir şişede sofistike heyecan.</string>
+    <string name="rose_wine">Pembe şarap</string>
+    <string name="see_the_wines">Şarapları Gör</string>
+    <string name="sparkling_wines">Şampanya</string>
+    <string name="white_wines">Beyaz Şaraplar</string>
+    <string name="red_wines">Kırmızı Şaraplar</string>
+    <string name="wine">Şarap</string>
+    <string name="not">Olmasın?</string>
+    <string name="we_offer_wine_set_almost_for_all_the_cases_of_life_choose_yours">Neredeyse tüm yaşam durumları için şarap seti sunuyoruz. seninkini seç</string>
+    <string name="broken">Kırılmış</string>
+    <string name="heart">Kalp</string>
+    <string name="oh_dear_we_know_the_best_combinations_of_wine_and_tears">Ah canım... Şarap ve gözyaşının en iyi kombinasyonlarını biliriz.</string>
+    <string name="we_re_all_about">Hepimiz size efsanevi bir içki deneyimi yaşatmak üzereyiz.</string>
+    <string name="you_can_t_have">Şarap olmadan düzgün bir kutlama yapamazsınız.</string>
+    <string name="sip_and_savor">Yudumlayın ve tadını çıkarın.</string>
+    <string name="location">Konum:</string>
+    <string name="average">Ortalama</string>
+    <string name="reviews">İncelemeler:</string>
+    <string name="main">ana sayfa</string>
+    <string name="search">arama</string>
+    <string name="detail">detay</string>
+</resources>
