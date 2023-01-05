@@ -1,5 +1,35 @@
 # WineApp
 
+This is an Android wine app that retrieves various wine lists from the internet and displays the items. The app includes four different types of wine and details about these wines. SearchView allows you to search for wines among all wines. This is a wine app that can be used to view wine lists and details easily.
+
+### This app uses the following technologies and libraries:
+* Jetpack Navigation
+* Safeargs
+* Shared Preferences
+* Retrofit
+* Dagger Hilt
+* Coroutines
+* MVVM(*ViewModel)
+* LiveData
+* ViewBinding
+* DataBinding
+* Lifecycles
+* Coil
+* Airbnb Lottie Files(Animations)
+
+### UI Components:
+* ViewPager2
+* Bottom Navigation
+* 2 Activity, Multiple Fragment. 
+(1 Activity -> Splash + OnBoarding Screens, 2. Activity -> Main and Detail Screens.)
+
+### This app includes the following features: 
+* Dark Mode
+* Multiple Language(Chinese, Russian, English, Turkish)
+
+### Technical Details:
+The data model in this app is distributed using the Parcelable interface. Data is transferred between fragments using Safe Args. The Retrofit library and Coroutines are used for the REST API. Connectivity Manager is used to control the data. The 'Sample APIs' are used for the API.
+
 
 ## Splash Screens(normal&dark mode)
 <img src="https://github.com/aliatillaydemir/WineApp/blob/master/screenshoths_wine/Screenshot_1.png"
@@ -78,27 +108,6 @@ width=20% height=50%>&ensp;&ensp;&ensp;
 width=20% height=50%>&ensp;&ensp;&ensp;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* The following resources were used in the development of this app: <br>
+Figma for some UI design -> https://www.figma.com/community/file/799000309926639288  <br>
+Sample APIs' for data -> https://sampleapis.com/api-list/wines
